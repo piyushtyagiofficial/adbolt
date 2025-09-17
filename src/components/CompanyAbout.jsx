@@ -55,27 +55,6 @@ const CompanyAbout = () => {
               </div>
             </div>
           </div>
-          
-          <div className="bg-dark-800 border border-dark-600 rounded-xl p-6 sm:p-8 lg:p-10">
-            <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-6 sm:mb-8 lg:mb-10 text-center">Contact Details</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 text-center">
-              <div className="p-4 sm:p-6 bg-dark-700 rounded-lg border border-dark-600 hover:border-accent-400 transition-colors duration-300">
-                <Mail className="w-6 h-6 sm:w-8 sm:h-8 text-blue-400 mx-auto mb-3" />
-                <h4 className="font-semibold text-white mb-2 text-sm sm:text-base lg:text-lg">Email</h4>
-                <p className="text-blue-400 text-sm sm:text-base break-all">info@adboltdigital.com</p>
-              </div>
-              <div className="p-4 sm:p-6 bg-dark-700 rounded-lg border border-dark-600 hover:border-accent-400 transition-colors duration-300">
-                <Phone className="w-6 h-6 sm:w-8 sm:h-8 text-green-400 mx-auto mb-3" />
-                <h4 className="font-semibold text-white mb-2 text-sm sm:text-base lg:text-lg">Phone</h4>
-                <p className="text-green-400 text-sm sm:text-base">+91 95485 06975</p>
-              </div>
-              <div className="p-4 sm:p-6 sm:col-span-2 lg:col-span-1 bg-dark-700 rounded-lg border border-dark-600 hover:border-accent-400 transition-colors duration-300">
-                <Globe className="w-6 h-6 sm:w-8 sm:h-8 text-yellow-400 mx-auto mb-3" />
-                <h4 className="font-semibold text-white mb-2 text-sm sm:text-base lg:text-lg">Website</h4>
-                <p className="text-yellow-400 text-sm sm:text-base">www.adboltdigital.com</p>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
