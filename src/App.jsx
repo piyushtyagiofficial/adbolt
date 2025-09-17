@@ -1,7 +1,24 @@
-export default function App() {
+import { useState } from 'react'
+import Hero from './components/Hero'
+import './index.css'
+
+function App() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleBookNowClick = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+    <div className="App">
+      <Hero onBookNowClick={handleBookNowClick} />
+      
+    </div>
   )
 }
+
+export default App
