@@ -2,7 +2,7 @@ import { Plus, Minus } from 'lucide-react';
 import { useState } from 'react';
 
 const FAQ = () => {
-  const [openIndex, setOpenIndex] = useState(0);
+  const [openIndex, setOpenIndex] = useState(-1);  // Changed from 0 to -1 to keep all closed initially
   
   const faqs = [
     {
@@ -28,39 +28,39 @@ const FAQ = () => {
   };
 
   return (
-    <section id="faq" className="py-16 bg-dark-800">
-      <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+    <section id="faq" className="py-12 sm:py-16 lg:py-20 bg-dark-800">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4 lg:mb-6">
               Frequently Asked Questions
             </h2>
-            <p className="text-xl text-gray-300">
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-300 px-4 sm:px-0">
               Get answers to common questions about our services
             </p>
           </div>
           
-          <div className="space-y-4">
+          <div className="space-y-3 sm:space-y-4 lg:space-y-6">
             {faqs.map((faq, index) => (
-              <div key={index} className="bg-dark-900 border border-dark-600 rounded-lg shadow-md overflow-hidden">
+              <div key={index} className="bg-dark-900 border border-dark-600 rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl">
                 <button
-                  className="w-full p-6 text-left flex items-center justify-between hover:bg-dark-700 transition-colors"
+                  className="w-full p-4 sm:p-6 lg:p-8 text-left flex items-center justify-between hover:bg-dark-700 transition-colors"
                   onClick={() => toggleFAQ(index)}
                 >
-                  <h3 className="text-lg font-semibold text-white pr-8">
+                  <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-white pr-4 sm:pr-8 leading-relaxed">
                     {faq.question}
                   </h3>
                   <div className="flex-shrink-0">
                     {openIndex === index ? (
-                      <Minus className="w-5 h-5 text-accent-400" />
+                      <Minus className="w-4 h-4 sm:w-5 sm:h-5 text-accent-400" />
                     ) : (
-                      <Plus className="w-5 h-5 text-accent-400" />
+                      <Plus className="w-4 h-4 sm:w-5 sm:h-5 text-accent-400" />
                     )}
                   </div>
                 </button>
                 {openIndex === index && (
-                  <div className="px-6 pb-6">
-                    <p className="text-gray-300 leading-relaxed">
+                  <div className="px-4 sm:px-6 lg:px-8 pb-4 sm:pb-6 lg:pb-8 pt-2 sm:pt-3 lg:pt-4">
+                    <p className="text-sm sm:text-base lg:text-lg text-gray-300 leading-relaxed">
                       {faq.answer}
                     </p>
                   </div>
@@ -69,18 +69,40 @@ const FAQ = () => {
             ))}
           </div>
           
-          <div className="mt-12 text-center bg-accent-600 text-white p-8 rounded-lg border border-accent-500">
-            <h3 className="text-2xl font-bold mb-4">Limited Slots Available – Don't Miss Out!</h3>
-            <p className="text-lg mb-6">
-              We work with limited clients each month to maintain quality.
-            </p>
-            <p className="text-xl font-semibold mb-6">
-              Entry package starts at just ₹7,999/month.
-            </p>
-            <div className="space-y-2">
-              <p className="text-lg">"Book Your Slot Today!"</p>
-              <p className="text-lg">"DM us now to get started"</p>
-              <p className="text-lg">"Let's grow your business online – limited slots available!"</p>
+          <div className="mt-8 sm:mt-12 lg:mt-16 text-center relative">
+            <div className="bg-gradient-to-br from-accent-600 via-accent-500 to-accent-700 text-white p-6 sm:p-8 lg:p-10 rounded-2xl border border-accent-400 shadow-2xl relative overflow-hidden">
+              {/* Background decoration */}
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent"></div>
+              <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
+              <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/5 rounded-full translate-y-12 -translate-x-12"></div>
+              
+              <div className="relative z-10">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-full mb-4 sm:mb-6">
+                  <span className="text-2xl">🚀</span>
+                </div>
+                <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-3 sm:mb-4 lg:mb-6">
+                  Limited Slots Available – Don't Miss Out!
+                </h3>
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 sm:p-6 mb-4 sm:mb-6 border border-white/20">
+                  <p className="text-base sm:text-lg lg:text-xl mb-2 leading-relaxed">
+                    We work with limited clients each month to maintain quality.
+                  </p>
+                  <p className="text-lg sm:text-xl lg:text-2xl font-semibold text-yellow-200">
+                    Entry package starts at just ₹7,999/month.
+                  </p>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 text-sm sm:text-base">
+                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-white/20">
+                    <p className="font-semibold">📅 Book Your Slot Today!</p>
+                  </div>
+                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-white/20">
+                    <p className="font-semibold">💬 DM us now to get started</p>
+                  </div>
+                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-white/20 sm:col-span-1">
+                    <p className="font-semibold">🚀 Limited slots available!</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

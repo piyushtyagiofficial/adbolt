@@ -1,10 +1,10 @@
-import { Check, Star, Crown, Zap } from 'lucide-react';
+import { Check, Medal, Crown, Rocket } from 'lucide-react';
 
 const Packages = ({ onBookNowClick }) => {
   const packages = [
     {
       name: "Basic Pass",
-      icon: <Zap className="w-8 h-8" />,
+      icon: <Rocket className="w-8 h-8" />,
       price: "₹7,990",
       bestFor: "Small businesses",
       popular: false,
@@ -18,7 +18,7 @@ const Packages = ({ onBookNowClick }) => {
     },
     {
       name: "Standard Pass",
-      icon: <Star className="w-8 h-8" />,
+      icon: <Medal className="w-8 h-8" />,
       price: "₹11,990",
       bestFor: "Growing brands looking for consistency and engagement",
       popular: true,
@@ -57,63 +57,63 @@ const Packages = ({ onBookNowClick }) => {
   ];
 
   return (
-    <section id="packages" className="py-16 bg-dark-800">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+    <section id="packages" className="py-12 sm:py-16 lg:py-20 bg-dark-800">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4 lg:mb-6">
             Choose Your Perfect Package
           </h2>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto px-4 sm:px-0">
             Flexible packages designed to meet your business needs and budget
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 max-w-7xl mx-auto">
           {packages.map((pkg, index) => (
             <div
               key={index}
-              className={`bg-dark-900 border border-dark-600 rounded-lg shadow-lg overflow-hidden transition-transform hover:scale-105 ${
-                pkg.popular ? 'ring-2 ring-accent-500 relative' : ''
+              className={`bg-dark-900 border border-dark-600 rounded-xl shadow-lg overflow-visible transition-all duration-300 hover:scale-105 hover:shadow-xl ${
+                pkg.popular ? 'ring-2 ring-accent-500 relative lg:scale-105 mt-6' : ''
               }`}
             >
               {pkg.popular && (
-                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                  <span className="bg-accent-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
+                  <span className="bg-accent-500 text-white px-3 sm:px-4 py-1 rounded-full text-xs sm:text-sm font-semibold shadow-lg">
                     Most Popular
                   </span>
                 </div>
               )}
               
-              <div className="p-8">
-                <div className="text-center mb-6">
-                  <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full mb-4 ${
+              <div className="p-4 sm:p-6 lg:p-8">
+                <div className="text-center mb-4 sm:mb-6">
+                  <div className={`inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-full mb-3 sm:mb-4 ${
                     pkg.popular ? 'bg-accent-100 text-accent-600' : 'bg-dark-700 text-gray-300'
                   }`}>
                     {pkg.icon}
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-2">{pkg.name}</h3>
-                  <p className="text-gray-400 text-sm mb-4">{pkg.bestFor}</p>
-                  <div className="text-4xl font-bold text-white">
+                  <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-1 sm:mb-2">{pkg.name}</h3>
+                  <p className="text-gray-400 text-xs sm:text-sm lg:text-base mb-3 sm:mb-4 px-2">{pkg.bestFor}</p>
+                  <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white">
                     {pkg.price}
-                    <span className="text-lg font-normal text-gray-400">/month</span>
+                    <span className="text-sm sm:text-base lg:text-lg font-normal text-gray-400">/month</span>
                   </div>
                 </div>
                 
-                <ul className="space-y-3 mb-8">
+                <ul className="space-y-2 sm:space-y-3 mb-6 sm:mb-8 min-h-[200px] sm:min-h-[250px]">
                   {pkg.services.map((service, serviceIndex) => (
                     <li key={serviceIndex} className="flex items-start">
-                      <Check className="w-5 h-5 text-accent-400 mr-3 mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-300 text-sm">{service}</span>
+                      <Check className="w-4 h-4 sm:w-5 sm:h-5 text-accent-400 mr-2 sm:mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-300 text-xs sm:text-sm lg:text-base leading-relaxed">{service}</span>
                     </li>
                   ))}
                 </ul>
                 
                 <button
                   onClick={onBookNowClick}
-                  className={`w-full py-3 px-4 rounded-lg font-semibold transition-colors ${
+                  className={`w-full py-2.5 sm:py-3 lg:py-4 px-4 sm:px-6 rounded-lg font-semibold text-sm sm:text-base transition-all duration-300 transform hover:scale-105 ${
                     pkg.popular
-                      ? 'bg-accent-600 text-white hover:bg-accent-700'
-                      : 'bg-dark-700 text-white hover:bg-dark-600 border border-dark-500'
+                      ? 'bg-accent-600 text-white hover:bg-accent-700 shadow-lg hover:shadow-xl'
+                      : 'bg-dark-700 text-white hover:bg-dark-600 border border-dark-500 hover:border-dark-400'
                   }`}
                 >
                   Choose {pkg.name}
