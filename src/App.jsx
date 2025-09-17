@@ -4,6 +4,7 @@ import Packages from './components/Packages'
 import WhyChooseUs from './components/WhyChooseUs'
 import FAQ from './components/FAQ'
 import CompanyAbout from './components/CompanyAbout'
+import EnquiryModal from './components/EnquiryModal'
 import './index.css'
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
       <WhyChooseUs />
       <FAQ />
       <CompanyAbout />
+      <EnquiryModal isOpen={isModalOpen} onClose={handleCloseModal} />
     </div>
   )
 }
