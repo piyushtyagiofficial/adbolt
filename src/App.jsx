@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Hero from './components/Hero'
 import Packages from './components/Packages'
+import WhyChooseUs from './components/WhyChooseUs'
 import './index.css'
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
     <div className="App">
       <Hero onBookNowClick={handleBookNowClick} />
       <Packages />
+      <WhyChooseUs />
     </div>
   )
 }
