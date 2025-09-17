@@ -17,7 +17,7 @@ const Header = ({ onBookNowClick }) => {
             className="flex items-center space-x-2 cursor-pointer hover:opacity-80 transition-opacity"
             onClick={scrollToTop}
           >
-            <img src={logo} alt="logo" className="w-16 h-8 sm:w-20 sm:h-10 object-contain" />
+            <img src={logo} alt="logo" className="w-32 h-12 sm:w-36 sm:h-14 lg:w-40 lg:h-16 object-contain" />
           </div>
           
           {/* Desktop Navigation */}
