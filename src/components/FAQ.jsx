@@ -28,39 +28,39 @@ const FAQ = () => {
   };
 
   return (
-    <section id="faq" className="py-16 bg-gray-50">
+    <section id="faq" className="py-16 bg-dark-800">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Frequently Asked Questions
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-gray-300">
               Get answers to common questions about our services
             </p>
           </div>
           
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden">
+              <div key={index} className="bg-dark-900 border border-dark-600 rounded-lg shadow-md overflow-hidden">
                 <button
-                  className="w-full p-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
+                  className="w-full p-6 text-left flex items-center justify-between hover:bg-dark-700 transition-colors"
                   onClick={() => toggleFAQ(index)}
                 >
-                  <h3 className="text-lg font-semibold text-gray-900 pr-8">
+                  <h3 className="text-lg font-semibold text-white pr-8">
                     {faq.question}
                   </h3>
                   <div className="flex-shrink-0">
                     {openIndex === index ? (
-                      <Minus className="w-5 h-5 text-primary-600" />
+                      <Minus className="w-5 h-5 text-accent-400" />
                     ) : (
-                      <Plus className="w-5 h-5 text-primary-600" />
+                      <Plus className="w-5 h-5 text-accent-400" />
                     )}
                   </div>
                 </button>
                 {openIndex === index && (
                   <div className="px-6 pb-6">
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-gray-300 leading-relaxed">
                       {faq.answer}
                     </p>
                   </div>
@@ -69,7 +69,7 @@ const FAQ = () => {
             ))}
           </div>
           
-          <div className="mt-12 text-center bg-primary-600 text-white p-8 rounded-lg">
+          <div className="mt-12 text-center bg-accent-600 text-white p-8 rounded-lg border border-accent-500">
             <h3 className="text-2xl font-bold mb-4">Limited Slots Available – Don't Miss Out!</h3>
             <p className="text-lg mb-6">
               We work with limited clients each month to maintain quality.

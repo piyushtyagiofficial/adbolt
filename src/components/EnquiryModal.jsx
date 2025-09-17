@@ -45,20 +45,20 @@ const EnquiryModal = ({ isOpen, onClose }) => {
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
-      <div className="bg-white rounded-lg max-w-md w-full p-6 relative">
+      <div className="bg-dark-900 border border-dark-600 rounded-lg max-w-md w-full p-6 relative">
         <button
           onClick={handleClose}
-          className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
+          className="absolute top-4 right-4 text-gray-400 hover:text-white"
         >
           <X className="w-6 h-6" />
         </button>
         
         {!showOptions ? (
           <div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Get Started Today!</h2>
+            <h2 className="text-2xl font-bold text-white mb-6">Get Started Today!</h2>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+                <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-1">
                   Company/Brand Name *
                 </label>
                 <input
@@ -68,13 +68,13 @@ const EnquiryModal = ({ isOpen, onClose }) => {
                   value={formData.name}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
+                  className="w-full px-3 py-2 border border-dark-600 bg-dark-800 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-accent-500"
                   placeholder="Enter your company name"
                 />
               </div>
               
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-1">
                   Email Address *
                 </label>
                 <input
@@ -84,13 +84,13 @@ const EnquiryModal = ({ isOpen, onClose }) => {
                   value={formData.email}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
+                  className="w-full px-3 py-2 border border-dark-600 bg-dark-800 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-accent-500"
                   placeholder="Enter your email"
                 />
               </div>
               
               <div>
-                <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
+                <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-1">
                   Phone Number *
                 </label>
                 <input
@@ -100,14 +100,14 @@ const EnquiryModal = ({ isOpen, onClose }) => {
                   value={formData.phone}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
+                  className="w-full px-3 py-2 border border-dark-600 bg-dark-800 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-accent-500"
                   placeholder="Enter your phone number"
                 />
               </div>
               
               <button
                 type="submit"
-                className="w-full bg-primary-600 text-white py-3 px-4 rounded-md hover:bg-primary-700 transition-colors font-semibold"
+                className="w-full bg-accent-600 text-white py-3 px-4 rounded-md hover:bg-accent-700 transition-colors font-semibold"
               >
                 Submit Enquiry
               </button>
@@ -115,8 +115,8 @@ const EnquiryModal = ({ isOpen, onClose }) => {
           </div>
         ) : (
           <div className="text-center">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Thank You!</h2>
-            <p className="text-gray-600 mb-6">
+            <h2 className="text-2xl font-bold text-white mb-4">Thank You!</h2>
+            <p className="text-gray-300 mb-6">
               Your enquiry has been submitted. How would you like to proceed?
             </p>
             
@@ -131,7 +131,7 @@ const EnquiryModal = ({ isOpen, onClose }) => {
               
               <button
                 onClick={handleScheduleMeeting}
-                className="w-full bg-primary-600 text-white py-3 px-4 rounded-md hover:bg-primary-700 transition-colors font-semibold flex items-center justify-center"
+                className="w-full bg-accent-600 text-white py-3 px-4 rounded-md hover:bg-accent-700 transition-colors font-semibold flex items-center justify-center"
               >
                 <Calendar className="w-5 h-5 mr-2" />
                 Schedule a Meeting
@@ -140,7 +140,7 @@ const EnquiryModal = ({ isOpen, onClose }) => {
             
             <button
               onClick={handleClose}
-              className="mt-4 text-gray-500 hover:text-gray-700 text-sm"
+              className="mt-4 text-gray-400 hover:text-white text-sm"
             >
               Close
             </button>

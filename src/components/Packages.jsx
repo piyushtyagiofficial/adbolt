@@ -57,13 +57,13 @@ const Packages = ({ onBookNowClick }) => {
   ];
 
   return (
-    <section id="packages" className="py-16 bg-gray-50">
+    <section id="packages" className="py-16 bg-dark-800">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Choose Your Perfect Package
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             Flexible packages designed to meet your business needs and budget
           </p>
         </div>
@@ -72,13 +72,13 @@ const Packages = ({ onBookNowClick }) => {
           {packages.map((pkg, index) => (
             <div
               key={index}
-              className={`bg-white rounded-lg shadow-lg overflow-hidden transition-transform hover:scale-105 ${
-                pkg.popular ? 'ring-2 ring-primary-500 relative' : ''
+              className={`bg-dark-900 border border-dark-600 rounded-lg shadow-lg overflow-hidden transition-transform hover:scale-105 ${
+                pkg.popular ? 'ring-2 ring-accent-500 relative' : ''
               }`}
             >
               {pkg.popular && (
                 <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                  <span className="bg-primary-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                  <span className="bg-accent-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
                     Most Popular
                   </span>
                 </div>
@@ -87,23 +87,23 @@ const Packages = ({ onBookNowClick }) => {
               <div className="p-8">
                 <div className="text-center mb-6">
                   <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full mb-4 ${
-                    pkg.popular ? 'bg-primary-100 text-primary-600' : 'bg-gray-100 text-gray-600'
+                    pkg.popular ? 'bg-accent-100 text-accent-600' : 'bg-dark-700 text-gray-300'
                   }`}>
                     {pkg.icon}
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{pkg.name}</h3>
-                  <p className="text-gray-600 text-sm mb-4">{pkg.bestFor}</p>
-                  <div className="text-4xl font-bold text-gray-900">
+                  <h3 className="text-2xl font-bold text-white mb-2">{pkg.name}</h3>
+                  <p className="text-gray-400 text-sm mb-4">{pkg.bestFor}</p>
+                  <div className="text-4xl font-bold text-white">
                     {pkg.price}
-                    <span className="text-lg font-normal text-gray-600">/month</span>
+                    <span className="text-lg font-normal text-gray-400">/month</span>
                   </div>
                 </div>
                 
                 <ul className="space-y-3 mb-8">
                   {pkg.services.map((service, serviceIndex) => (
                     <li key={serviceIndex} className="flex items-start">
-                      <Check className="w-5 h-5 text-accent-500 mr-3 mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-700 text-sm">{service}</span>
+                      <Check className="w-5 h-5 text-accent-400 mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-300 text-sm">{service}</span>
                     </li>
                   ))}
                 </ul>
@@ -112,8 +112,8 @@ const Packages = ({ onBookNowClick }) => {
                   onClick={onBookNowClick}
                   className={`w-full py-3 px-4 rounded-lg font-semibold transition-colors ${
                     pkg.popular
-                      ? 'bg-primary-600 text-white hover:bg-primary-700'
-                      : 'bg-gray-900 text-white hover:bg-gray-800'
+                      ? 'bg-accent-600 text-white hover:bg-accent-700'
+                      : 'bg-dark-700 text-white hover:bg-dark-600 border border-dark-500'
                   }`}
                 >
                   Choose {pkg.name}

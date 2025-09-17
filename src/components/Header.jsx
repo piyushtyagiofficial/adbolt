@@ -10,7 +10,7 @@ const Header = ({ onBookNowClick }) => {
   };
 
   return (
-    <header className="bg-white shadow-md fixed w-full top-0 z-50">
+    <header className="bg-dark-900 shadow-lg border-b border-dark-700 fixed w-full top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           <div 
@@ -22,22 +22,22 @@ const Header = ({ onBookNowClick }) => {
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <a href="#packages" className="text-gray-700 hover:text-primary-600 transition-colors">Packages</a>
-            <a href="#why-choose-us" className="text-gray-700 hover:text-primary-600 transition-colors">Why Choose Us</a>
-            <a href="#faq" className="text-gray-700 hover:text-primary-600 transition-colors">FAQ</a>
-            <a href="#about" className="text-gray-700 hover:text-primary-600 transition-colors">About</a>
+            <a href="#packages" className="text-gray-300 hover:text-accent-400 transition-colors">Packages</a>
+            <a href="#why-choose-us" className="text-gray-300 hover:text-accent-400 transition-colors">Why Choose Us</a>
+            <a href="#faq" className="text-gray-300 hover:text-accent-400 transition-colors">FAQ</a>
+            <a href="#about" className="text-gray-300 hover:text-accent-400 transition-colors">About</a>
           </nav>
 
           <button
             onClick={onBookNowClick}
-            className="hidden md:block bg-primary-600 text-white px-6 py-2 rounded-lg hover:bg-primary-700 transition-colors"
+            className="hidden md:block bg-accent-600 text-white px-6 py-2 rounded-lg hover:bg-accent-700 transition-colors shadow-lg"
           >
             Book Now
           </button>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden"
+            className="md:hidden text-gray-300 hover:text-white"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -46,15 +46,15 @@ const Header = ({ onBookNowClick }) => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="md:hidden py-4 border-t">
+          <nav className="md:hidden py-4 border-t border-dark-700">
             <div className="flex flex-col space-y-4">
-              <a href="#packages" className="text-gray-700 hover:text-primary-600 transition-colors">Packages</a>
-              <a href="#why-choose-us" className="text-gray-700 hover:text-primary-600 transition-colors">Why Choose Us</a>
-              <a href="#faq" className="text-gray-700 hover:text-primary-600 transition-colors">FAQ</a>
-              <a href="#about" className="text-gray-700 hover:text-primary-600 transition-colors">About</a>
+              <a href="#packages" className="text-gray-300 hover:text-accent-400 transition-colors">Packages</a>
+              <a href="#why-choose-us" className="text-gray-300 hover:text-accent-400 transition-colors">Why Choose Us</a>
+              <a href="#faq" className="text-gray-300 hover:text-accent-400 transition-colors">FAQ</a>
+              <a href="#about" className="text-gray-300 hover:text-accent-400 transition-colors">About</a>
               <button
                 onClick={onBookNowClick}
-                className="bg-primary-600 text-white px-6 py-2 rounded-lg hover:bg-primary-700 transition-colors text-left"
+                className="bg-accent-600 text-white px-6 py-2 rounded-lg hover:bg-accent-700 transition-colors text-left shadow-lg"
               >
                 Book Now
               </button>
