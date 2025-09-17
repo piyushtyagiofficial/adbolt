@@ -10,7 +10,7 @@ const Header = ({ onBookNowClick }) => {
   };
 
   return (
-    <header className="bg-dark-900 shadow-lg border-b border-dark-700 fixed w-full top-0 z-50">
+    <header className="bg-dark-900 shadow-lg border-b border-dark-700 sticky top-0 z-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-3 sm:py-4">
           <div 

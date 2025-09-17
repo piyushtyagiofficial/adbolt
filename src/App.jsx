@@ -7,6 +7,7 @@ import CompanyAbout from './components/CompanyAbout'
 import EnquiryModal from './components/EnquiryModal'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import Offer from './components/Offer'
 import './index.css'
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
 
   return (
     <div className="App">
+      <Offer />
       <Header onBookNowClick={handleBookNowClick} />
       <Hero onBookNowClick={handleBookNowClick} />
       <Packages />
