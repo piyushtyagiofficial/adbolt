@@ -5,6 +5,7 @@ import WhyChooseUs from './components/WhyChooseUs'
 import FAQ from './components/FAQ'
 import CompanyAbout from './components/CompanyAbout'
 import EnquiryModal from './components/EnquiryModal'
+import Header from './components/Header'
 import './index.css'
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
 
   return (
     <div className="App">
+      <Header onBookNowClick={handleBookNowClick} />
       <Hero onBookNowClick={handleBookNowClick} />
       <Packages />
       <WhyChooseUs />
