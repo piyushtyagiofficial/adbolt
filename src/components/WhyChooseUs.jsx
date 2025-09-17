@@ -1,29 +1,29 @@
-import { CheckCircle, Target, Palette, TrendingUp, Users, Zap } from 'lucide-react';
+import { TableOfContents, Gem , Target, Palette, ChartNoAxesCombined, HandCoins, TrendingUp, Users, Factory, Zap } from 'lucide-react';
 
 const WhyChooseUs = () => {
   const reasons = [
     {
-      icon: <Palette className="w-8 h-8 text-accent-400" />,
+      icon: <TableOfContents className="w-8 h-8 text-accent-400" />,
       title: "Professional Content Creation",
       description: "We convert your photos & clips into professional, trending content"
     },
     {
-      icon: <TrendingUp className="w-8 h-8 text-accent-400" />,
+      icon: <Gem className="w-8 h-8 text-green-400" />,
       title: "Consistent Brand Presence",
       description: "Consistent posting that keeps your brand active & visible"
     },
     {
-      icon: <Target className="w-8 h-8 text-orange-400" />,
+      icon: <ChartNoAxesCombined  className="w-8 h-8 text-blue-400" />,
       title: "Sales-Focused Strategy",
       description: "Sales-focused strategy, not just likes & followers"
     },
     {
-      icon: <Zap className="w-8 h-8 text-purple-400" />,
+      icon: <HandCoins className="w-8 h-8 text-yellow-400" />,
       title: "Affordable Packages",
       description: "Affordable packages starting from just ₹7,999/month"
     },
     {
-      icon: <Users className="w-8 h-8 text-blue-400" />,
+      icon: <Factory className="w-8 h-8 text-purple-400" />,
       title: "Industry Experience",
       description: "Trusted by cafes, gyms, clinics, salons, boutiques & SMEs"
     }
@@ -31,23 +31,23 @@ const WhyChooseUs = () => {
 
   const benefits = [
     {
-      icon: <Target className="w-6 h-6" />,
+      icon: "1",
       title: "Customized strategy for your niche"
     },
     {
-      icon: <Palette className="w-6 h-6" />,
+      icon: "2",
       title: "Branded, high-quality designs"
     },
     {
-      icon: <TrendingUp className="w-6 h-6" />,
+      icon: "3",
       title: "Consistent growth with tested hacks"
     },
     {
-      icon: <Users className="w-6 h-6" />,
+      icon: "4",
       title: "Dedicated support team"
     },
     {
-      icon: <Zap className="w-6 h-6" />,
+      icon: "5",
       title: "Content that connects, converts & sells"
     }
   ];
@@ -87,10 +87,10 @@ const WhyChooseUs = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 lg:gap-6 max-w-5xl mx-auto">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-center bg-dark-800 border border-dark-600 p-3 sm:p-4 lg:p-5 rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
-                  <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-accent-600 rounded-full flex items-center justify-center mr-3 sm:mr-4">
-                    <div className="text-white text-sm sm:text-base">
+                  <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-accent-500 to-accent-700 rounded-full flex items-center justify-center mr-3 sm:mr-4 shadow-lg">
+                    <span className="text-white font-bold text-lg sm:text-xl lg:text-2xl">
                       {benefit.icon}
-                    </div>
+                    </span>
                   </div>
                   <span className="text-white font-medium text-sm sm:text-base lg:text-lg">{benefit.title}</span>
                 </div>
