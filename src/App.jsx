@@ -6,6 +6,7 @@ import FAQ from './components/FAQ'
 import CompanyAbout from './components/CompanyAbout'
 import EnquiryModal from './components/EnquiryModal'
 import Header from './components/Header'
+import Footer from './components/Footer'
 import './index.css'
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
       <FAQ />
       <CompanyAbout />
       <EnquiryModal isOpen={isModalOpen} onClose={handleCloseModal} />
+      <Footer />
     </div>
   )
 }
