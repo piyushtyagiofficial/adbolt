@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Hero from './components/Hero'
+import Packages from './components/Packages'
 import './index.css'
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
   return (
     <div className="App">
       <Hero onBookNowClick={handleBookNowClick} />
-      
+      <Packages />
     </div>
   )
 }
