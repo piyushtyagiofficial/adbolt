@@ -44,7 +44,7 @@ const Hero = ({ onBookNowClick }) => {
         </svg>
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-20 pt-32 sm:pt-36 lg:pt-56">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-20 pt-16 sm:pt-20 lg:pt-28">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-8 sm:mb-12 lg:mb-16">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-3 sm:mb-4 lg:mb-6 leading-tight animate-fade-in-up">
